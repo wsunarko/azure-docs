@@ -753,7 +753,7 @@ Migrating a resource adds an entry to the cluster configuration. An example is f
 First, force a cluster failover by migrating the **msl** resource to the current secondary master node. This command gives a warning that a **move constraint** was created:
 
 <pre><code>
-crm resource migrate msl_SAPHanaCon_HSO_HDB00 force
+crm resource move msl_SAPHanaCon_HSO_HDB00 force
 
 INFO: Move constraint created for msl_SAPHanaCon_HSO_HDB00
 </code></pre>
@@ -808,7 +808,7 @@ Unfortunately, such constraints might impact the overall cluster behavior. So it
 
 
 <pre><code>
-crm resource unmigrate msl_SAPHanaCon_HSO_HDB00
+crm resource clear msl_SAPHanaCon_HSO_HDB00
 
 INFO: Removed migration constraints for msl_SAPHanaCon_HSO_HDB00
 </code></pre>
